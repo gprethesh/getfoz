@@ -1,11 +1,10 @@
 # Foz Betting Contract
 
-This is an EOSIO-based smart contract for placing and resolving bets. It allows users to place bets on events, resolve events, withdraw their funds, and more. 
+This is an Wax Blockchain smart contract for placing and resolving bets. It allows users to place bets on events, resolve events, withdraw their funds, and more. 
 
 ## Installation
 
-Compile the contract with EOSIO.CDT (Contract Development Toolkit). You can find the installation guide [here](https://developers.eos.io/manuals/eosio.cdt/latest/installation-guide/index).
-
+Compile the contract with EOSIO.CDT (Contract Development Toolkit). 
 After installing EOSIO.CDT, compile the contract using:
 
 ```
@@ -106,4 +105,4 @@ void ontransfer(name from, name to, asset quantity, string memo);
 
 ## Notes
 
-This contract is a complex application and should be thoroughly tested before any use in a production environment. Make sure to handle the permissions properly and secure the contract account.
+This code is property of https://getfoz.com.
