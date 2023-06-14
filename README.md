@@ -2,12 +2,6 @@
 
 This is an Wax Blockchain smart contract for placing and resolving bets. It allows users to place bets on events, resolve events, withdraw their funds, and more. 
 
-## Installation
-
-Compile the contract with EOSIO.CDT (Contract Development Toolkit). 
-After installing EOSIO.CDT, compile the contract using:
-
-
 ## Requirements
 
 To compile and deploy this contract, you will need:
