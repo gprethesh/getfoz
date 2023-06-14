@@ -7,9 +7,51 @@ This is an Wax Blockchain smart contract for placing and resolving bets. It allo
 Compile the contract with EOSIO.CDT (Contract Development Toolkit). 
 After installing EOSIO.CDT, compile the contract using:
 
+
+## Requirements
+
+To compile and deploy this contract, you will need:
+1. EOSIO software installed on your system.
+2. The account on the WAX testnet where you want to deploy this contract.
+
+## Compile the Contract
+
+Firstly, we need to compile the contract using `eosio-cpp`. Navigate to the folder containing `foz.cpp` and run:
+
 ```
-eosio-cpp foz.cpp -o foz.wasm
+eosio-cpp -abigen -o foz.wasm foz.cpp
 ```
+
+This command generates two files `foz.wasm` (the compiled contract) and `foz.abi` (the contract's Application Binary Interface file).
+
+## Set the Contract
+
+Next, we set the contract to our account. In this example, we're using an account named `boatheadboat`.
+
+Replace `/Users/georgeprethesh/contracts/foz` with the path where your compiled contract is located.
+
+```
+cleos -u  https://wax-testnet.eosphere.io set contract boatheadboat /Users/georgeprethesh/contracts/foz foz.wasm --abi foz.abi -p boatheadboat
+```
+
+## Set the Contract Permissions
+
+The contract needs permission to execute its actions. Here we set the `eosio.code` permission for our contract.
+
+```
+cleos --url https://wax-testnet.eosphere.io set account permission boatdeadboat active '{"threshold": 1, "keys": [{"key": "EOS83PPpjU9zQwLwMGsA9SBbNDGh62eDU7mNvX4y3rr4jZcow5Qa8", "weight": 1}], "accounts": [{"permission": {"actor": "boatdeadboat", "permission": "eosio.code"}, "weight": 1}]}' -p boatdeadboat@active
+```
+
+Note: Always ensure you replace the account names and key with your account details.
+
+Replace `EOS83PPpjU9zQwLwMGsA9SBbNDGh62eDU7mNvX4y3rr4jZcow5Qa8` with your account public key.
+
+`https://wax-testnet.eosphere.io` with your testnet rpc or endpoint
+
+`boatdeadboat` with your account
+
+That's it! Your smart contract is now deployed on the WAX testnet.
+
 
 ## Features
 
