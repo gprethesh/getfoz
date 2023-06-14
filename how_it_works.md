@@ -1,6 +1,6 @@
 # Welcome to Foz Betting!
 
-Foz Betting is a novel and secure EOSIO-based smart contract that offers you a unique platform for placing and resolving bets on various events.
+Foz Betting is a novel and secure Wax Blockchain based smart contract that offers you a unique platform for placing and resolving bets on various events.
 
 ## Key Features
 
@@ -30,6 +30,5 @@ We encourage you to thoroughly test our platform and provide feedback. We are co
 
 Join Foz Betting today and experience a unique betting platform like no other!
 
-Note: This contract is a complex application and should be used responsibly. Please handle permissions carefully and ensure your account is secure.
 
 Enjoy the game and bet responsibly!
